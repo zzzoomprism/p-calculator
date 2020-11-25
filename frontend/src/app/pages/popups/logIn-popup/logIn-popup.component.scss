@@ -1,0 +1,155 @@
+@import "../../../../assets/styles/constants/colors";
+@import "../../../../assets/styles/constants/breakpoints";
+
+
+:host {
+  height: 100%;
+  width: 100%;
+  .logIn-wrapper {
+    display: flex;
+    flex-direction: column;
+
+    ::ng-deep {
+      mat-spinner {
+        position: absolute;
+        left: 264px;
+        bottom: 248px;
+      }
+    }
+
+    .error-label {
+      position: absolute;
+    }
+
+    .logIn-label {
+      font-weight: bold;
+      font-size: 26px;
+    }
+
+    .title {
+      display: flex;
+      width: 100%;
+      flex: 1;
+      align-items: center;
+      justify-content: space-between;
+      padding-bottom: 30px;
+    }
+
+    .code-label {
+      font-size: 16px;
+    }
+
+    .logIn-stage-wrapper {
+      display: flex;
+
+      .logIn-stage {
+        height: 8px;
+        width: 8px;
+        border-radius: 50%;
+        margin-left: 8px;
+        background-color: #755C94;
+      }
+
+      .checked {
+        background-color: white;
+      }
+    }
+
+    .controls-wrapper {
+      margin-bottom: 48px;
+      width: 100%;
+      flex: 1;
+
+      .control-input {
+        position: relative;
+        padding-bottom: 32px;
+
+        .eye-icon,
+        .eye-visible {
+          width: 20px;
+          height: 20px;
+          background: url("../../../../assets/icons/eye-off.svg") no-repeat;
+          background-size: contain;
+          position: absolute;
+          top: 20px;
+          right: 17px;
+          cursor: pointer;
+        }
+
+        .eye-visible {
+          background-size: contain;
+        }
+      }
+
+      .error {
+        ::ng-deep {
+          .input-wrapper {
+            border: 1px solid #FF99B2;
+
+            label {
+              border-bottom: 1px solid #FF99B2
+            }
+
+            .input input {
+              color: #FF99B2;
+            }
+          }
+        }
+      }
+    }
+
+    .btn-wrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      min-height: 54px;
+
+    }
+
+    .forgot-password{
+      color: $dark;
+      font-size: 13px;
+      line-height: 125%;
+  }
+
+    .phone-number {
+      padding-bottom: 32px;
+    }
+
+    .reset-button-wrapper {
+      display: flex;
+      justify-content: right;
+      cursor: pointer;
+      margin-top: 140px;
+
+      .reset-button {
+        width: 24px;
+        height: 24px;
+        margin-right: 8px;
+      }
+
+      .reset-button-text {
+        @media (max-width: $small) {
+          display: none;
+        }
+      }
+    }
+
+    .timer-on {
+      cursor: default;
+
+      .reset-button {
+        opacity: 0.3;
+      }
+
+      .reset-button-text {
+        padding-right: 145px;
+        opacity: 0.3;
+      }
+
+      .timer {
+        font-weight: bold;
+      }
+    }
+  }
+}

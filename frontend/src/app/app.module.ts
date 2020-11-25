@@ -16,6 +16,10 @@ import { PrivacyPolicyComponent } from './pages/privacy-policy/privacy-policy.co
 import { KeenComponent } from './pages/keen/keen.component';
 import { FooterModule } from './shared/footer/footer.module';
 import { ButtonModule } from './shared/button/button.module';
+import { LogInPopupComponent } from './pages/popups/logIn-popup/logIn-popup.component';
+import { DialogModule } from './shared/dialog/dialog.module';
+import { FormsModule } from '@angular/forms';
+import { NgOtpInputModule } from 'ng-otp-input';
 
 @NgModule({
   declarations: [
@@ -37,6 +41,9 @@ import { ButtonModule } from './shared/button/button.module';
     SliderModule,
     FooterModule,
     ButtonModule,
+    DialogModule,
+    FormsModule,
+    NgOtpInputModule
   ],
   providers: [],
   bootstrap: [AppComponent]

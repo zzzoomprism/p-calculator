@@ -21,6 +21,7 @@ export class InputComponent {
   @Input() value: any;
   @Input() inputType = 'text';
   @Input() readonly = false;
+  @Input() placeholder: string;
 
   public get noValidation(): boolean {
     return typeof this.isInvalid === 'undefined';
