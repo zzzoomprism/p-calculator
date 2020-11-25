@@ -19,6 +19,10 @@ import { ButtonModule } from './shared/button/button.module';
 import { PersonalInformationComponent } from './pages/personal-information/personal-information.component';
 import { TabsComponent } from './shared/tabs/tabs.component';
 import { PersonalLayoutComponent } from './pages/personal-layout/personal-layout.component';
+import { LogInPopupComponent } from './pages/popups/logIn-popup/logIn-popup.component';
+import { DialogModule } from './shared/dialog/dialog.module';
+import { FormsModule } from '@angular/forms';
+import { NgOtpInputModule } from 'ng-otp-input';
 
 @NgModule({
   declarations: [
@@ -43,6 +47,9 @@ import { PersonalLayoutComponent } from './pages/personal-layout/personal-layout
     SliderModule,
     FooterModule,
     ButtonModule,
+    DialogModule,
+    FormsModule,
+    NgOtpInputModule
   ],
   providers: [],
   bootstrap: [AppComponent]

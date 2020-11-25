@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, TemplateRef, ViewChild } from '@angular/core';
 import { ISelect } from '../../shared/select/select.component';
+
 
 @Component({
   selector: 'app-home-desktop',
@@ -12,9 +13,14 @@ export class HomeDesktopComponent implements OnInit {
     { value: 1993, title: "1993", shortValue: "93"},
     { value: 1994, title: "1994", shortValue: "94"},
   ];
-  constructor() { }
+
+
+  constructor(
+
+  ) { }
 
   ngOnInit(): void {
   }
+
 
 }

@@ -1,0 +1,15 @@
+<perfect-scrollbar #scroll>
+  <div class="wrapper-dialog">
+    <i class="material-icons close"
+       [ngClass]="{'show-dialog-close': data.isHideDialogClose}" mat-dialog-close>close</i>
+    <div class="header-dialog" *ngIf="data.headerText">
+      <span class="title">{{data.headerText | translate}}</span>
+    </div>
+    <div class="body-dialog">
+      <ng-container
+        [ngTemplateOutlet]="data.template"
+        [ngTemplateOutletContext]="data.context"
+      ></ng-container>
+    </div>
+  </div>
+</perfect-scrollbar>

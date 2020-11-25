@@ -15,10 +15,13 @@
     <mat-icon class="informiert"></mat-icon>
     <span class="informiert text">Informiert bleiben</span>
   </div>
-    <div class="menu-links-item item">
+  <div class="menu-links-item item" (click)="openLogInPopup()">
     <mat-icon class="log-in"></mat-icon>
     <span class="log-in text">Anmelden</span>
   </div>
   </div>
-
 </div>
+
+<ng-template #logInPopupTemplate>
+  <app-logIn-popup (closeDialog)="dialog.close()" [dialog]="dialog"></app-logIn-popup>
+</ng-template>
