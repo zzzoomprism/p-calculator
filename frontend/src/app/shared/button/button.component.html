@@ -1,0 +1,9 @@
+<section
+  class="button-wrapper"
+  [ngClass]="{'disabled': disabled, 'full': isFull}"
+  [ngStyle]="{'border-color': color}"
+  (click)="buttonClicked()">
+  <button [attr.id]="gtmId" class="title" [ngStyle]="{'color': color}" [disabled]="disabled" [ngClass]="{'disabled': disabled}">
+    {{title}}
+  </button>
+</section>

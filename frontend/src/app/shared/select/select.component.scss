@@ -1,0 +1,110 @@
+@import '../../../assets/styles/constants/colors';
+@import '../../../assets/styles/constants/breakpoints';
+@import '../../../assets/styles/font-size';
+
+:host {
+  width: 100%;
+}
+
+.select {
+  display: flex;
+  flex-direction: column;
+
+  ::ng-deep {
+    .mat-form-field-disabled {
+      opacity: 0.3;
+    }
+
+    .mat-form-field {
+      width: 100%;
+      font-family: inherit;
+
+      .mat-select-value {
+        color: $dark;
+        font-weight: 400;
+        font-family: 'Poppins', sans-serif !important;
+        font-size: 16px;
+      }
+
+    }
+    .mat-form-field-wrapper{
+      padding: 0
+    }
+
+    .mat-form-field-flex {
+      align-items: flex-end;
+    }
+
+    .mat-form-field-infix {
+      border-top: 0;
+      padding: 0;
+    }
+
+    .mat-select-arrow-wrapper {
+      min-width: 24px;
+    }
+
+    .mat-select-arrow {
+      border: 0;
+      background: url('../../../assets/icons/down-arrow.svg') no-repeat center;
+      width: 17px;
+      height: 8px;
+      margin: auto;
+    }
+
+    .without-border {
+      .mat-form-field-wrapper {
+        padding-bottom: 0;
+      }
+
+      .mat-form-field-flex {
+        border: 0;
+      }
+
+      .mat-select-arrow {
+        filter: brightness(0) invert(1);
+      }
+    }
+
+    .mat-form-field-underline {
+      display: none;
+    }
+  }
+}
+
+::ng-deep {
+  .select-panel {
+    color: $dark;
+    border: 1px solid rgba(48, 54, 82, 0.3);
+    box-sizing: border-box;
+    border-radius: 12px;
+    width: 110px !important;
+    min-width: 110px !important;
+    height: 100%;
+    background: $white-2;
+
+    .mat-option {
+      color: $dark !important;
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      height: 51px !important;
+      line-height: 42px !important;
+      font-size: 16px !important;
+
+      .mat-option-text {
+        text-align: center;
+      }
+
+      .mat-option-text::first-letter {
+        text-transform: uppercase;
+      }
+    }
+
+    .mat-select-panel .mat-option.mat-selected:not(.mat-option-multiple) {
+      background: $light-blue;
+    }
+
+    .mat-option:hover:not(.mat-option-disabled) {
+      background: $light-blue;
+    }
+  }
+}

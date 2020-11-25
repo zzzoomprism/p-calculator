@@ -1,0 +1,39 @@
+<perfect-scrollbar>
+  <section class="wrapper">
+    <div class="body">
+      <div class="content">
+        <div class="content-left-part">
+          <div class="content-left-part-title">
+            Was Sie heute können besorgen, das verschieben nicht auf morgen
+          </div>
+          <div  class="content-left-part-description">
+            Mit unserem kostenlosen Rechner können Sie Ihre zukünftigen Vorsorgeleistungen überprüfen und herausfinden, wie Sie diese verbessern können.
+          </div>
+        </div>
+        <div class="content-right-part">
+        <div class="content-right-part-title">
+          Berechnen Sie jetzt Ihre zukünftigen Vorsorgeleistungen
+        </div>
+        <div class="first-row">
+          <div class="first-row-item">
+            <app-select [list]="birthList" [selectedValue]="'1993'" ></app-select>
+          </div>
+          <div class="first-row-item">
+                <app-radio-button></app-radio-button>
+          </div>
+        </div>
+          <div class="second-row">
+            <app-select [list]="birthList" [selectedValue]="'1993'" ></app-select>
+          </div>
+          <div class="third-row">
+            <app-slider [value]="1000" [max]="500000" [min]="10000" title="Jährliches Erwerbseinkommen"></app-slider>
+          </div>
+          <div class="forth-row">
+            <app-button title="Los!" [isFull]="true" ></app-button>
+          </div>
+        </div>
+      </div>
+      <ng-container></ng-container>
+    </div>
+  </section>
+</perfect-scrollbar>

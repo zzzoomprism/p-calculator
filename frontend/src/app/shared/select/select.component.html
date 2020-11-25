@@ -1,0 +1,32 @@
+<div class="select">
+  <ng-container>
+    <mat-form-field [floatLabel]="'never'" [ngClass]="{'active': isActive, 'without-border': !isBorderShow}">
+      <mat-select
+        [panelClass]="['select-panel']"
+        (selectionChange)="select()"
+        [(ngModel)]="selectedValue"
+      >
+        <mat-select-trigger>
+          {{selectedValue ? (shortValue) : 'DE'}}
+        </mat-select-trigger>
+
+        <ng-container>
+          <ng-container *ngTemplateOutlet="options"></ng-container>
+        </ng-container>
+
+        <ng-template #desktopPanel>
+          <perfect-scrollbar #scroll>
+            <ng-container *ngTemplateOutlet="options"></ng-container>
+          </perfect-scrollbar>
+        </ng-template>
+
+        <ng-template #options>
+          <mat-option *ngFor="let option of languagesList" [value]="option.value">
+            {{option.title}}
+          </mat-option>
+        </ng-template>
+
+      </mat-select>
+    </mat-form-field>
+  </ng-container>
+</div>

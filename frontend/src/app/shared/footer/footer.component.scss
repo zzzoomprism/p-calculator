@@ -1,0 +1,59 @@
+@import "../../../assets/styles/constants/colors";
+@import "../../../assets/styles/constants/breakpoints";
+.links-footer {
+  position:absolute;
+  bottom: 28px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 168px;
+  margin-top: -44px;
+  z-index: 100;
+
+  @media screen and (max-width: $middle) {
+    flex-direction: column;
+    padding: 0;
+
+  }
+
+  .logo {
+    z-index: 100;
+    width: 114px;
+    height: 16px;
+    background: url("../../../assets/icons/made-by-keen.svg") no-repeat;
+
+    @media screen and (max-width: $middle) {
+      margin-bottom: 35px;
+    }
+  }
+}
+
+.links {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+
+  @media screen and (max-width: $middle) {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  a {
+    color: $grey;
+    font-size: 13px;
+    text-decoration: underline;
+    opacity: 0.4;
+    cursor: pointer;
+    outline: none;
+
+    &:not(:last-child) {
+      margin-right: 32px;
+
+      @media screen and (max-width: $middle) {
+        margin-right: 0;
+        margin-bottom: 16px;
+      }
+    }
+  }
+}

@@ -1,0 +1,44 @@
+<div class="slider-wrapper">
+  <div class="slider-content">
+    <div class="slider-value" [ngClass]="{'with-title': title}">
+      <div class="description">
+        <p class="title">{{title}}</p>
+      </div>
+      <p class="selected-value" *ngIf="!isCanEnterValue; else input">
+        {{value.toLocaleString('en-US')}} {{metric}}
+      </p>
+    </div>
+  </div>
+  <div class="background">
+    <mat-slider [max]="max"
+                [min]="min"
+                [step]="step"
+                [disabled]="max - min === 0 || isDisabled"
+                [(ngModel)]="value"
+                (input)="changeSlider($event)"
+                (click)="$event.preventDefault()"
+    ></mat-slider>
+  </div>
+
+
+
+  <div class="min-max-container">
+    <span>{{min}} {{metric}}</span>
+    <span>{{max}} {{metric}}</span>
+  </div>
+</div>
+
+<ng-template #input>
+  <div class="input-container">
+    <input class="input-sum"
+           [maxLength]="maxLength"
+           [disabled]="max - min === 0 || isDisabled"
+           [(ngModel)]="inputValue"
+           (ngModelChange)="changeInputValue($event)"
+           (keypress)="keypress($event)"
+           (focus)="focus()"
+           (blur)="blur()"
+           type="text">
+    <div class="input-text">{{metric}}</div>
+  </div>
+</ng-template>

@@ -1,0 +1,33 @@
+@import '../../../assets/styles/constants/colors';
+
+
+.radio-group{
+  display:flex;
+  justify-content: space-between;
+  &-item{
+    margin-left: 34px;
+  }
+}
+
+::ng-deep{
+.mat-accent{
+
+}
+
+  .mat-radio-checked .mat-radio-outer-circle{
+    border-color: $dark !important;
+  }
+  .mat-radio-checked .mat-radio-inner-circle{
+    background-color: $dark !important;
+  }
+  .mat-button-focus-overlay {
+    background-color: transparent!important;
+  }
+  .mat-button-mouse-focus-overlay {
+    background-color: transparent!important;
+  }
+  .mat-radio-label-content{
+    font-family: Poppins, Roboto, sans-serif;
+    font-size: 16px;
+  }
+}

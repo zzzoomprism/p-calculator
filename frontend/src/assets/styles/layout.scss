@@ -1,0 +1,102 @@
+@import 'constants/colors';
+@import 'constants/breakpoints';
+@import 'font-size';
+
+$padding-mobile: 30px;
+$padding-desktop: 80px;
+$height-footer-mobile: 90px;
+$height-footer-desktop: 145px;
+$height-fade-out-mobile: 20px;
+$height-fade-out-desktop: 50px;
+
+:host {
+  ::ng-deep .wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    position: relative;
+    padding-bottom: $padding-mobile;
+
+    .header {
+      padding: 55px $padding-desktop 0;
+
+      @media (max-width: $xs) {
+        padding: $padding-mobile $padding-mobile 0;
+      }
+
+      @media (max-width: $small) {
+        padding: 0 0 26px;
+      }
+    }
+
+    .body {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      overflow: auto;
+      padding: $height-fade-out-desktop $padding-desktop #{$height-footer-desktop - $padding-mobile};
+
+      @media (max-width: $small) {
+        height: 100%;
+/*        display: grid;
+        grid-template-rows: 70px calc(100% - 170px) 100px;*/
+      }
+
+      @media (max-width: $xs) {
+        padding: 20px 30px;
+      }
+
+      .description {
+        @include fluidMobileFontSize(19px, 21px);
+      }
+    }
+
+    .footer {
+      display: flex;
+      justify-content: flex-end;
+      padding: 0 80px;
+/*      position: absolute;*/
+      z-index: 101;
+      bottom: 0;
+      height: $height-footer-desktop;
+      width: 100%;
+/*      transition: background-color 150ms linear;
+      background: transparent;*/
+
+      @media (max-width: $small) {
+        height: auto;
+        margin-top: 50px;
+        padding: 0;
+        flex: 1;
+        align-items: flex-end;
+      }
+
+      &--attach {
+/*        background: rgba(76, 45, 111, 0.9);
+        transition: background-color 300ms linear;*/
+      }
+    }
+
+    .fade-out {
+      position: absolute;
+      z-index: 1;
+      width: calc(100% - #{$padding-desktop * 2});
+      height: $height-fade-out-desktop;
+
+      @media (max-width: $small) {
+        height: $height-fade-out-mobile;
+        width: calc(100% - #{$padding-mobile * 2});
+      }
+
+      &-top {
+        top: 0;
+      }
+
+      &-bottom {
+        bottom: 0;
+      }
+    }
+  }
+
+
+}
