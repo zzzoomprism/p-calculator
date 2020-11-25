@@ -1,0 +1,16 @@
+<div>
+  <div class="first-row">
+    <div class="first-row-select">
+      <app-select [list]="birthList" [selectedValue]="'1993'" ></app-select>
+    </div>
+    <div class="first-row-item">
+      <app-radio-button></app-radio-button>
+    </div>
+  </div>
+  <div class="second-row">
+    <app-select [list]="birthList" [selectedValue]="'1993'" ></app-select>
+  </div>
+  <div class="third-row">
+    <app-button title="Weiter" [isFull]="true" [img]="'assets/icons/right-arrow.svg'"></app-button>
+  </div>
+</div>

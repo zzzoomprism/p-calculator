@@ -3,7 +3,8 @@
   [ngClass]="{'disabled': disabled, 'full': isFull}"
   [ngStyle]="{'border-color': color}"
   (click)="buttonClicked()">
-  <button [attr.id]="gtmId" class="title" [ngStyle]="{'color': color}" [disabled]="disabled" [ngClass]="{'disabled': disabled}">
+  <button [attr.id]="gtmId" class="title" [ngStyle]="{'color': color}" [disabled]="disabled" [ngClass]="{'disabled': disabled, 'padding-40': !img}">
     {{title}}
+    <img *ngIf="img" [src]="img">
   </button>
 </section>

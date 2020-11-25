@@ -16,6 +16,9 @@ import { PrivacyPolicyComponent } from './pages/privacy-policy/privacy-policy.co
 import { KeenComponent } from './pages/keen/keen.component';
 import { FooterModule } from './shared/footer/footer.module';
 import { ButtonModule } from './shared/button/button.module';
+import { PersonalInformationComponent } from './pages/personal-information/personal-information.component';
+import { TabsComponent } from './shared/tabs/tabs.component';
+import { PersonalLayoutComponent } from './pages/personal-layout/personal-layout.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +27,9 @@ import { ButtonModule } from './shared/button/button.module';
     TermsComponent,
     PrivacyPolicyComponent,
     KeenComponent,
+    PersonalInformationComponent,
+    TabsComponent,
+    PersonalLayoutComponent,
   ],
   imports: [
     BrowserModule,
