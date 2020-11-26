@@ -6,7 +6,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { HeaderModule } from './shared/header/header.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PerfectScrollbarModule } from 'ngx-perfect-scrollbar';
-import { HomeDesktopComponent } from './pages/home-desktop/home-desktop.component';
+import { HomeDesktopComponent } from './pages/home/home-desktop/home-desktop.component';
 import { InputModule } from "./shared/input/input.module";
 import { SelectModule } from './shared/select-border/select.module';
 import { RadioButtonModule } from './shared/radio-button/radio-button.module';
@@ -16,10 +16,10 @@ import { PrivacyPolicyComponent } from './pages/privacy-policy/privacy-policy.co
 import { KeenComponent } from './pages/keen/keen.component';
 import { FooterModule } from './shared/footer/footer.module';
 import { ButtonModule } from './shared/button/button.module';
-import { LogInPopupComponent } from './pages/popups/logIn-popup/logIn-popup.component';
 import { DialogModule } from './shared/dialog/dialog.module';
 import { FormsModule } from '@angular/forms';
 import { NgOtpInputModule } from 'ng-otp-input';
+import { BarChartModule } from './shared/bar-chart/bar-chart.module';
 
 @NgModule({
   declarations: [
@@ -43,7 +43,8 @@ import { NgOtpInputModule } from 'ng-otp-input';
     ButtonModule,
     DialogModule,
     FormsModule,
-    NgOtpInputModule
+    NgOtpInputModule,
+    BarChartModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -3,7 +3,7 @@
     <div class="logIn-label">Anmelden</div>
   </div>
 
-  <div class="first-stage" *ngIf="firstLogInStage">
+  <div class="first-stage">
     <div class="controls-wrapper">
       <div class="control-input" [ngClass]="{'error': !!email.errors && !email.pristine}">
         <app-input placeholder="Email"></app-input>
