@@ -64,7 +64,7 @@ export class StayInformedPopupComponent implements OnInit {
     );
   }
 
-  public openSuccessPopup() {
+  public openSuccessPopup(): void {
     this.openSuccess.emit(true);
   }
 

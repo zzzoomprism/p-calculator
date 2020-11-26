@@ -1,0 +1,36 @@
+@import "../../../../assets/styles/constants/colors";
+@import "../../../../assets/styles/constants/breakpoints";
+
+
+:host {
+  width: 100%;
+  .stay-informed-success-wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+
+    .stay-informed-success-label {
+      font-weight: bold;
+      font-size: 26px;
+    }
+
+    .title {
+      display: flex;
+      width: 100%;
+      padding-bottom: 13px;
+    }
+
+    .controls-wrapper {
+      margin-bottom: 49px;
+      width: 100%;
+      flex: 1;
+    }
+
+    .btn-wrapper {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      min-height: 54px;
+    }
+  }
+}

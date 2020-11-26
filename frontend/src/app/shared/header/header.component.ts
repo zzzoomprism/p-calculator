@@ -17,6 +17,13 @@ export class HeaderComponent implements OnInit {
   @ViewChild('logInPopupTemplate', {static: false}) logInPopupTemplate: TemplateRef<any>;
   @ViewChild('stayInformedPopupTemplate', {static: false}) stayInformedPopupTemplate: TemplateRef<any>;
   @ViewChild('stayInformedSuccessPopupTemplate', {static: false}) stayInformedSuccessPopupTemplate: TemplateRef<any>;
+  @ViewChild('ahvPopupTemplate', {static: false}) ahvPopupTemplate: TemplateRef<any>;
+  @ViewChild('purchasePensionFundPopupTemplate', {static: false}) purchasePensionFundPopupTemplate: TemplateRef<any>;
+  @ViewChild('thirdPillarInfoPopupTemplate', {static: false}) thirdPillarInfoPopupTemplate: TemplateRef<any>;
+  @ViewChild('thirdPillarContributionInfoPopupTemplate', {static: false}) thirdPillarContributionInfoPopupTemplate: TemplateRef<any>;
+  @ViewChild('reinvestmentInfoPopupTemplate', {static: false}) reinvestmentInfoPopupTemplate: TemplateRef<any>;
+  @ViewChild('verifiedUserPopupTemplate', {static: false}) verifiedUserPopupTemplate: TemplateRef<any>;
+
 
   ngOnInit(): void {
   }
@@ -41,7 +48,6 @@ export class HeaderComponent implements OnInit {
   }
 
   public openStayInformedSuccessPopup(): void {
-
     this.dialog = this.dialogFactoryService.open({
       headerText: '',
       template: this.stayInformedSuccessPopupTemplate
@@ -50,4 +56,68 @@ export class HeaderComponent implements OnInit {
       height: '456px'
     });
   }
+
+  //unused popup functions
+
+  public openAhvPopup(): void {
+    this.dialog = this.dialogFactoryService.open({
+      headerText: '',
+      template: this.ahvPopupTemplate
+    }, {
+      width: POPUP_WIDTH,
+      height: '536px'
+    });
+  }
+
+  public openPurchasePensionFundPopup(): void {
+    this.dialog = this.dialogFactoryService.open({
+      headerText: '',
+      template: this.purchasePensionFundPopupTemplate
+    }, {
+      width: POPUP_WIDTH,
+      height: '632px'
+    });
+  }
+
+  public openThirdPillarInfoPopup(): void {
+    this.dialog = this.dialogFactoryService.open({
+      headerText: '',
+      template: this.thirdPillarInfoPopupTemplate
+    }, {
+      width: POPUP_WIDTH,
+      height: '656px'
+    });
+  }
+
+  public openThirdPillarContributionInfoPopup(): void {
+    this.dialog = this.dialogFactoryService.open({
+      headerText: '',
+      template: this.thirdPillarContributionInfoPopupTemplate
+    }, {
+      width: POPUP_WIDTH,
+      height: '528px'
+    });
+  }
+
+  public openReinvestmentInfoPopup(): void {
+    this.dialog = this.dialogFactoryService.open({
+      headerText: '',
+      template: this.reinvestmentInfoPopupTemplate
+    }, {
+      width: POPUP_WIDTH,
+      height: '552px'
+    });
+  }
+
+  public openVerifiedUserPopup(): void {
+    this.dialog = this.dialogFactoryService.open({
+      headerText: '',
+      template: this.verifiedUserPopupTemplate
+    }, {
+      width: POPUP_WIDTH,
+      height: '288px'
+    });
+  }
+
+  //unused popup functions
 }
