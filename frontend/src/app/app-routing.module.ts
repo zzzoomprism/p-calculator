@@ -5,8 +5,17 @@ import { HomeDesktopComponent } from './pages/home/home-desktop/home-desktop.com
 import { TermsComponent } from './pages/terms/terms.component';
 import { PrivacyPolicyComponent } from './pages/privacy-policy/privacy-policy.component';
 import { KeenComponent } from './pages/keen/keen.component';
+import {PersonalLayoutComponent} from "./pages/personal-layout/personal-layout.component";
 
 const routes: Routes = [
+  {
+    path: `:language/${RoutesNames.HOME}`,
+    component: HomeDesktopComponent,
+  },
+  {
+    path: `:language/${RoutesNames.PERSONAL_INFO}`,
+    component: PersonalLayoutComponent,
+  },
   {
     path: `ch-en/${RoutesNames.TERMS}`,
     component: TermsComponent,

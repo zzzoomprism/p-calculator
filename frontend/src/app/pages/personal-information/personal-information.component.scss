@@ -1,0 +1,27 @@
+@import "../../../assets/styles/constants/colors";
+
+
+:host{
+  height: 100vh;
+  .first-row{
+    max-height: 56px;
+    max-width: 460px;
+    margin-top: 47px;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    &-select {
+      max-width: 167px;
+    }
+  }
+  .second-row{
+    margin-top: 32px;
+    max-width: 480px;
+  }
+  .third-row{
+    margin-top: 336px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+}

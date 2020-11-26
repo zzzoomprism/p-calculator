@@ -16,10 +16,15 @@ import { PrivacyPolicyComponent } from './pages/privacy-policy/privacy-policy.co
 import { KeenComponent } from './pages/keen/keen.component';
 import { FooterModule } from './shared/footer/footer.module';
 import { ButtonModule } from './shared/button/button.module';
+import { PersonalInformationComponent } from './pages/personal-information/personal-information.component';
+import { TabsComponent } from './shared/tabs/tabs.component';
+import { PersonalLayoutComponent } from './pages/personal-layout/personal-layout.component';
+import { LogInPopupComponent } from './pages/popups/logIn-popup/logIn-popup.component';
 import { DialogModule } from './shared/dialog/dialog.module';
 import { FormsModule } from '@angular/forms';
 import { NgOtpInputModule } from 'ng-otp-input';
 import { BarChartModule } from './shared/bar-chart/bar-chart.module';
+import { IncomeGrossComponent } from './pages/income-gross/income-gross.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +33,10 @@ import { BarChartModule } from './shared/bar-chart/bar-chart.module';
     TermsComponent,
     PrivacyPolicyComponent,
     KeenComponent,
+    PersonalInformationComponent,
+    TabsComponent,
+    PersonalLayoutComponent,
+    IncomeGrossComponent,
   ],
   imports: [
     BrowserModule,

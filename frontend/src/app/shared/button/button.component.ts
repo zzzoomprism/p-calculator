@@ -10,6 +10,7 @@ export class ButtonComponent implements OnInit {
   @Input() gtmId;
   @Input() title: string;
   @Input() color;
+  @Input() img: string;
   @Input() isFull = false;
   @Output() buttonClick: EventEmitter<boolean> = new EventEmitter<boolean>();
   constructor() { }

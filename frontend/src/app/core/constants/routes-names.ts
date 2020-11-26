@@ -6,4 +6,5 @@ export enum RoutesNames {
   TERMS = 'terms-and-conditions',
   PRIVACY_POLICY = 'data-protection',
   KEEN = 'about',
+  PERSONAL_INFO = 'personal-information'
 }
