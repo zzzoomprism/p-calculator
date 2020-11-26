@@ -1,0 +1,85 @@
+@import "../../../../assets/styles/constants/colors";
+@import "../../../../assets/styles/constants/breakpoints";
+
+
+:host {
+  height: 100%;
+  width: 100%;
+  .stay-informed-wrapper {
+    display: flex;
+    flex-direction: column;
+
+    ::ng-deep {
+      mat-spinner {
+        position: absolute;
+        left: 264px;
+        bottom: 248px;
+      }
+    }
+
+    .stay-informed-label {
+      font-weight: bold;
+      font-size: 26px;
+    }
+
+    .title {
+      display: flex;
+      width: 100%;
+      flex: 1;
+      align-items: center;
+      justify-content: space-between;
+      padding-bottom: 30px;
+    }
+
+    .controls-wrapper {
+      margin-bottom: 48px;
+      width: 100%;
+      flex: 1;
+
+      .control-input {
+        position: relative;
+        padding-bottom: 32px;
+
+        .eye-icon,
+        .eye-visible {
+          width: 20px;
+          height: 20px;
+          background: url("../../../../assets/icons/eye-off.svg") no-repeat;
+          background-size: contain;
+          position: absolute;
+          top: 20px;
+          right: 17px;
+          cursor: pointer;
+        }
+
+        .eye-visible {
+          background-size: contain;
+        }
+      }
+
+      .error {
+        ::ng-deep {
+          .input-wrapper {
+            border: 1px solid #FF99B2;
+
+            label {
+              border-bottom: 1px solid #FF99B2
+            }
+
+            .input input {
+              color: #FF99B2;
+            }
+          }
+        }
+      }
+    }
+
+
+    .btn-wrapper {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      min-height: 54px;
+    }
+  }
+}

@@ -1,0 +1,20 @@
+<div class="stay-informed-success-wrapper">
+  <div class="title">
+    <div class="stay-informed-success-label">Danke!</div>
+  </div>
+
+  <div class="first-stage">
+    <div class="controls-wrapper">
+      <div class="description">
+        Sie sind nun auf unserer Mailingliste.
+      </div>
+    </div>
+    <div class="btn-wrapper">
+      <app-button
+        [isFull]="true"
+        (buttonClick)="dialog.close()"
+        [title]="'Ok'">
+      </app-button>
+    </div>
+  </div>
+</div>

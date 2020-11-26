@@ -15,6 +15,8 @@ export class HeaderComponent implements OnInit {
                 ) {}
 
   @ViewChild('logInPopupTemplate', {static: false}) logInPopupTemplate: TemplateRef<any>;
+  @ViewChild('stayInformedPopupTemplate', {static: false}) stayInformedPopupTemplate: TemplateRef<any>;
+  @ViewChild('stayInformedSuccessPopupTemplate', {static: false}) stayInformedSuccessPopupTemplate: TemplateRef<any>;
 
   ngOnInit(): void {
   }
@@ -25,6 +27,27 @@ export class HeaderComponent implements OnInit {
     }, {
       width: POPUP_WIDTH,
       height: '467px'
+    });
+  }
+
+  public openStayInformedPopup(): void {
+    this.dialog = this.dialogFactoryService.open({
+      headerText: '',
+      template: this.stayInformedPopupTemplate
+    }, {
+      width: POPUP_WIDTH,
+      height: '760px'
+    });
+  }
+
+  public openStayInformedSuccessPopup(): void {
+
+    this.dialog = this.dialogFactoryService.open({
+      headerText: '',
+      template: this.stayInformedSuccessPopupTemplate
+    }, {
+      width: POPUP_WIDTH,
+      height: '456px'
     });
   }
 }

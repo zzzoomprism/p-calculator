@@ -9,11 +9,15 @@ import { LogInPopupComponent } from '../../pages/popups/logIn-popup/logIn-popup.
 import { InputModule } from '../input/input.module';
 import { ButtonModule } from '../button/button.module';
 import { NgOtpInputModule } from 'ng-otp-input';
+import {StayInformedPopupComponent} from "../../pages/popups/stay-informed-popup/stay-informed-popup.component";
+import {StayInformedSuccessPopupComponent} from "../../pages/popups/stay-informed-success-popup/stay-informed-success-popup.component";
 
 @NgModule({
   declarations: [
     HeaderComponent,
-    LogInPopupComponent
+    LogInPopupComponent,
+    StayInformedPopupComponent,
+    StayInformedSuccessPopupComponent
   ],
   exports: [
     HeaderComponent

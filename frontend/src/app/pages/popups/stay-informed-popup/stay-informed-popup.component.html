@@ -1,0 +1,32 @@
+<div class="stay-informed-wrapper">
+  <div class="title">
+    <div class="stay-informed-label">Erhalten Sie die neuesten Artikel und Informationen per E-Mail:</div>
+  </div>
+
+  <div class="first-stage">
+    <div class="controls-wrapper">
+      <div class="control-input" [ngClass]="{'error': !!firstName.errors && !firstName.pristine}">
+        <app-input placeholder="Vorname"></app-input>
+      </div>
+      <div class="control-input" [ngClass]="{'error': !!secondName.errors && !secondName.pristine}">
+        <app-input placeholder="Name"></app-input>
+      </div>
+      <div class="control-input" [ngClass]="{'error': !!email.errors && !email.pristine || isActiveErrorStyle}">
+        <app-input placeholder="Email"></app-input>
+      </div>
+      <div>
+        Wir werden Ihre Daten mit Respekt behandeln. Ihre Daten werden unter keinen Umständen an Unbefugte weitergegeben.
+      </div>
+      <div>
+        Klicken Sie hier für weitere Details.
+      </div>
+    </div>
+    <div class="btn-wrapper">
+      <app-button
+        [isFull]="true"
+        (buttonClick)="openSuccessPopup()"
+        [title]="'Abonnieren'">
+      </app-button>
+    </div>
+  </div>
+</div>

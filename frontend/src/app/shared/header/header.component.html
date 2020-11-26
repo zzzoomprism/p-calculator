@@ -11,7 +11,7 @@
     <mat-icon class="schweizer"></mat-icon>
     <span class="schweizer text">Schweizer Vorsorgesystem</span>
   </div>
-  <div class="menu-links-item item">
+  <div class="menu-links-item item" (click)="openStayInformedPopup()">
     <mat-icon class="informiert"></mat-icon>
     <span class="informiert text">Informiert bleiben</span>
   </div>
@@ -24,4 +24,12 @@
 
 <ng-template #logInPopupTemplate>
   <app-logIn-popup (closeDialog)="dialog.close()" [dialog]="dialog"></app-logIn-popup>
+</ng-template>
+
+<ng-template #stayInformedPopupTemplate>
+  <app-stay-informed-popup (closeDialog)="dialog.close()" (openSuccess)="dialog.close(); openStayInformedSuccessPopup()" [dialog]="dialog"></app-stay-informed-popup>
+</ng-template>
+
+<ng-template #stayInformedSuccessPopupTemplate>
+  <app-stay-informed-success-popup (closeDialog)="dialog.close()" [dialog]="dialog"></app-stay-informed-success-popup>
 </ng-template>
