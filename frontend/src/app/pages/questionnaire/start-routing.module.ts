@@ -5,6 +5,7 @@ import { IncomeGrossComponent } from './income-gross/income-gross.component';
 import { StartComponent } from './start.component';
 import {PersonalInformationComponent} from "./personal-information/personal-information.component";
 import {SecondPillarComponent} from "./second-pillar/second-pillar.component";
+import {AdditionalComponent} from "./additional/additional.component";
 
 const routes: Routes = [
   {
@@ -22,6 +23,10 @@ const routes: Routes = [
       {
         path: `${RoutesNames.SECOND_PILLAR}`,
         component: SecondPillarComponent,
+      },
+      {
+        path: `${RoutesNames.ADDITIONAL}`,
+        component: AdditionalComponent,
       },
     ]
   },

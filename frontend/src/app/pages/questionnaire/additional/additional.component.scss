@@ -1,0 +1,50 @@
+@import "../../../../assets/styles/constants/colors";
+
+
+:host{
+  .content {
+    display: flex;
+    flex-direction: column;
+    height: 70vh;
+
+    .columns {
+      display: flex;
+      flex-direction: row;
+      height: 100%;
+      .first-column {
+        display: flex;
+        flex-direction: column;
+        width: 60%;
+      }
+      .second-column {
+        display: flex;
+        flex-direction: column;
+        width: 40%;
+      }
+    }
+    .first-row{
+      margin-top: 20px;
+    }
+    .title {
+      font-style: normal;
+      font-weight: bold;
+      font-size: 20px;
+      line-height: 150%;
+    }
+
+    .description{
+      margin-bottom: 25px;
+    }
+
+    .row-description{
+      margin: 12px 0;
+    }
+    .third-row{
+      margin-top: auto;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+    }
+  }
+
+}

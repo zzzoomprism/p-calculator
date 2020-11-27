@@ -1,0 +1,31 @@
+@import "../../../../assets/styles/constants/colors";
+@import "../../../../assets/styles/constants/breakpoints";
+
+
+:host {
+  width: 100%;
+  .stay-informed-success-wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+
+    .stay-informed-success-label {
+      font-weight: bold;
+      font-size: 26px;
+    }
+
+    .title {
+      display: flex;
+      width: 100%;
+    }
+
+    .controls-wrapper {
+      width: 100%;
+      flex: 1;
+
+      p:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}

@@ -9,5 +9,6 @@ export enum RoutesNames {
   PERSONAL_INFO = 'personal-information',
   QUESTIONNAIRE = 'questionnaire',
   INCOME = 'income-gross',
-  SECOND_PILLAR = 'second-pillar'
+  SECOND_PILLAR = 'second-pillar',
+  ADDITIONAL = 'additional'
 }

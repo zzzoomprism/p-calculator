@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit, TemplateRef, ViewChild} from '@angular/core';
+import {DialogService} from "../../../shared/dialog/services/dialog.service";
+import {DialogFactoryService} from "../../../shared/dialog/services/dialog-factory.service";
+import {POPUP_WIDTH} from "../../../core/constants/popups";
 
 @Component({
   selector: 'app-second-pillar',
@@ -7,12 +10,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SecondPillarComponent implements OnInit {
 
-  constructor() { }
+  public dialog: DialogService;
+
+  @ViewChild('secondPillarInfoPopupTemplate', {static: false}) secondPillarInfoPopupTemplate: TemplateRef<any>;
+
+  constructor(
+    private dialogFactoryService: DialogFactoryService
+  ) { }
 
   ngOnInit(): void {
   }
 
   public openPopup(): void {
-    console.log('test');
+    this.dialog = this.dialogFactoryService.open({
+      headerText: '',
+      template: this.secondPillarInfoPopupTemplate
+    }, {
+      width: POPUP_WIDTH,
+      height: '456px'
+    });
   }
 }

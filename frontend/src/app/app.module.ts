@@ -24,6 +24,8 @@ import { BarChartModule } from './shared/bar-chart/bar-chart.module';
 import { IncomeGrossComponent } from './pages/questionnaire/income-gross/income-gross.component';
 import { StartModule } from './pages/questionnaire/start.module';
 import {SecondPillarComponent} from "./pages/questionnaire/second-pillar/second-pillar.component";
+import {SecondPillarInfoPopupComponent} from "./pages/popups/second-pillar-info-popup/second-pillar-info-popup.component";
+import {AdditionalComponent} from "./pages/questionnaire/additional/additional.component";
 
 @NgModule({
   declarations: [
@@ -34,7 +36,9 @@ import {SecondPillarComponent} from "./pages/questionnaire/second-pillar/second-
     KeenComponent,
     PersonalInformationComponent,
     IncomeGrossComponent,
-    SecondPillarComponent
+    SecondPillarComponent,
+    AdditionalComponent,
+    SecondPillarInfoPopupComponent
   ],
   imports: [
     BrowserModule,

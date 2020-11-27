@@ -1,0 +1,29 @@
+<div class="content">
+  <div  class="description">
+    Abgesehen von der Einzahlung in das Vorsorgesystem (drei Säulen) können Sie zusätzliche Geld auf Ihren Bankkonten sparen und diese in Wertschriften, Kryptowährungen und andere Vermögenswerte investieren, deren Wert im Laufe der Zeit zunimmt. Diese können eine wichtige Ergänzung zu Ihren Altersleistungen sein, wenn Sie Ihre Karriere beenden.
+  </div>
+  <div class="columns">
+    <div class="first-column">
+      <div class="title">
+        Haben Sie weitere  Vermögenswerte?
+      </div>
+      <div class="first-row">
+        <app-slider title="Aktuelle Ersparnisse" [step]="1000" [min]="0" [max]="5000000" metric="CHF" [value]="100000"></app-slider>
+        <div  class="row-description">
+          So viel haben Sie bisher gespart. Denken Sie an alle Vermögenswerte, die Sie derzeit bseitzen. Dies können 3b-Guthaben, Lebensversicherungen, Bankkonten, Wert von Aktien usw. sein.
+        </div>
+      </div>
+      <div class="first-row">
+        <app-slider title="Jährliche Sparquote" [step]="1000" [min]="0" [max]="500000" metric="CHF" [value]="100000"></app-slider>
+        <div  class="row-description">
+          Wählen Sie aus, wie viel Sie jedes Jahr sparen möchten. “Jedes Geld ist eine Chance.”
+        </div>
+      </div>
+    </div>
+    <div class="second-column">
+      <div class="third-row">
+        <app-button title="Weiter" [isFull]="true" [img]="'assets/icons/right-arrow.svg'"></app-button>
+      </div>
+    </div>
+  </div>
+</div>

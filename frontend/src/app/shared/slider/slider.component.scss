@@ -89,18 +89,18 @@
         flex-direction: row;
         align-items: center;
 
-        img {
+        .help {
           cursor: pointer;
         }
 
         .title {
           font-style: normal;
-          font-weight: bold;
-          font-size: 20px;
+          font-weight: 600;
+          font-size: 18px;
           margin-right: 33px;
           @media (max-width: $small) {
-            font-weight: bold;
-            font-size: 20px;
+            font-weight: 600;
+            font-size: 18px;
             line-height: 25px;
             padding: 27px 0 0 0;
             text-align: center;
