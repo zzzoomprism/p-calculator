@@ -1,0 +1,17 @@
+@import "../../../assets/styles/constants/colors";
+
+::ng-deep{
+  .graph-bar-text{
+    font-family: Inter, sans-serif;
+    font-size: 16px;
+    color: $blue-black;
+    width: 100px;
+  }
+  .text-value{
+    font-style: normal;
+    font-weight: bold;
+    font-size: 26px;
+    line-height: 150%;
+    color: $blue-black;
+  }
+}

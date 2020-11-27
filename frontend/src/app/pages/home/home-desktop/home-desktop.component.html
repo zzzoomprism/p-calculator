@@ -10,7 +10,7 @@
             Mit unserem kostenlosen Rechner können Sie Ihre zukünftigen Vorsorgeleistungen überprüfen und herausfinden, wie Sie diese verbessern können.
           </div>
         </div>
-        <div class="content-right-part">
+        <div class="content-right-part" *ngIf="routerUrl === '/ch-en/home'">
         <div class="content-right-part-title">
           Berechnen Sie jetzt Ihre zukünftigen Vorsorgeleistungen
         </div>
@@ -29,11 +29,27 @@
             <app-slider [value]="1000" [max]="500000" [min]="10000" title="Jährliches Erwerbseinkommen"></app-slider>
           </div>
           <div class="forth-row">
-            <app-button title="Los!" [isFull]="true" ></app-button>
+            <app-button title="Los!" [isFull]="true" (click)="navigation()"></app-button>
+          </div>
+        </div>
+
+
+        <div class="content-right-part" *ngIf="routerUrl === '/ch-en/calculated'">
+          <div class="content-right-part-title">
+            Sie haben noch 35 Jahre bis zur ordentlichen Pensionierung
+          </div>
+          <div class="graphic">
+            <app-bar-chart></app-bar-chart>
+          </div>
+          <div class="description">
+            Sie möchten Ihren Lebensstandard nach der Pensionierung erhalten?
+            Wir bei Ybe.CH wissen wie!
+          </div>
+          <div class="next-button">
+            <app-button [isFull]="true" title="Mehr erfahren" (click)="navigationToPersonalInfo()"></app-button>
           </div>
         </div>
       </div>
-      <ng-container></ng-container>
     </div>
   </section>
 </perfect-scrollbar>

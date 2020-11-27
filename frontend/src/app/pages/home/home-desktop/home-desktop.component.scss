@@ -1,24 +1,26 @@
-@import "../../../assets/styles/constants/colors";
+@import "../../../../assets/styles/constants/colors";
 
 
 :host{
   .wrapper{
     height: 100%;
-    overflow:hidden;
-    padding: 80px 168px;
-    background-image: url("../../../assets/icons/bggraphic.svg");
     background-color: $white-2;
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-    background-position: -70px 0px;
+    overflow:hidden;
     &:before{
       content: '';
-
+      position: fixed;
+      bottom: -20px;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url("../../../../assets/icons/bgGraphic.svg");
+      background-size: 1165px  100%;
+      background-repeat: no-repeat;
     }
     &:after{
       content: '';
       position: absolute;
-      background: url("../../../assets/icons/Tree.svg") no-repeat;
+      background: url("../../../../assets/icons/Tree.svg") no-repeat;
       z-index: 3;
       width: 285px;
       height: 298.4px;
@@ -28,6 +30,7 @@
     .body{
       position: relative;
       z-index: 10;
+      padding: 80px 168px;
     }
 
     .content{
@@ -54,7 +57,8 @@
       }
 
       &-right-part{
-        flex: 1 auto;
+        display: flex;
+        flex-direction: column;
         .first-row{
           max-height: 56px;
           margin-top: 47px;
@@ -84,6 +88,15 @@
           font-weight: bold;
           font-size: 26px;
           line-height: 150%;
+        }
+
+        .graphic-bar{
+          height: 600px;
+        }
+
+        .next-button{
+          margin-top: 7px;
+          align-self: flex-end;
         }
       }
     }

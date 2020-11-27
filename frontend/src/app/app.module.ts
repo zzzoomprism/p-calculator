@@ -6,7 +6,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { HeaderModule } from './shared/header/header.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PerfectScrollbarModule } from 'ngx-perfect-scrollbar';
-import { HomeDesktopComponent } from './pages/home-desktop/home-desktop.component';
+import { HomeDesktopComponent } from './pages/home/home-desktop/home-desktop.component';
 import { InputModule } from "./shared/input/input.module";
 import { SelectModule } from './shared/select-border/select.module';
 import { RadioButtonModule } from './shared/radio-button/radio-button.module';
@@ -16,13 +16,14 @@ import { PrivacyPolicyComponent } from './pages/privacy-policy/privacy-policy.co
 import { KeenComponent } from './pages/keen/keen.component';
 import { FooterModule } from './shared/footer/footer.module';
 import { ButtonModule } from './shared/button/button.module';
-import { PersonalInformationComponent } from './pages/personal-information/personal-information.component';
-import { TabsComponent } from './shared/tabs/tabs.component';
-import { PersonalLayoutComponent } from './pages/personal-layout/personal-layout.component';
-import { LogInPopupComponent } from './pages/popups/logIn-popup/logIn-popup.component';
+import { PersonalInformationComponent } from './pages/questionnaire/personal-information/personal-information.component';
+import { PersonalLayoutComponent } from './pages/questionnaire/personal-layout/personal-layout.component';
 import { DialogModule } from './shared/dialog/dialog.module';
 import { FormsModule } from '@angular/forms';
 import { NgOtpInputModule } from 'ng-otp-input';
+import { BarChartModule } from './shared/bar-chart/bar-chart.module';
+import { IncomeGrossComponent } from './pages/questionnaire/income-gross/income-gross.component';
+import { StartModule } from './pages/questionnaire/start.module';
 
 @NgModule({
   declarations: [
@@ -32,8 +33,8 @@ import { NgOtpInputModule } from 'ng-otp-input';
     PrivacyPolicyComponent,
     KeenComponent,
     PersonalInformationComponent,
-    TabsComponent,
     PersonalLayoutComponent,
+    IncomeGrossComponent,
   ],
   imports: [
     BrowserModule,
@@ -49,7 +50,9 @@ import { NgOtpInputModule } from 'ng-otp-input';
     ButtonModule,
     DialogModule,
     FormsModule,
-    NgOtpInputModule
+    NgOtpInputModule,
+    BarChartModule,
+    StartModule
   ],
   providers: [],
   bootstrap: [AppComponent]

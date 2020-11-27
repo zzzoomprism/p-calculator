@@ -11,8 +11,7 @@ import { POPUP_WIDTH, POPUP_HEIGHT } from '../../core/constants/popups';
 export class HeaderComponent implements OnInit {
   public dialog: DialogService;
   constructor(
-    private dialogFactoryService: DialogFactoryService
-                ) {}
+    private dialogFactoryService: DialogFactoryService ) {}
 
   @ViewChild('logInPopupTemplate', {static: false}) logInPopupTemplate: TemplateRef<any>;
   @ViewChild('stayInformedPopupTemplate', {static: false}) stayInformedPopupTemplate: TemplateRef<any>;
@@ -25,8 +24,7 @@ export class HeaderComponent implements OnInit {
   @ViewChild('verifiedUserPopupTemplate', {static: false}) verifiedUserPopupTemplate: TemplateRef<any>;
 
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
   public openLogInPopup(): void {
     this.dialog = this.dialogFactoryService.open({
       headerText: '',

@@ -1,10 +1,8 @@
-import {Component, EventEmitter, OnInit, Output, Input, TemplateRef, ViewChild, ChangeDetectorRef} from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output, TemplateRef, ViewChild } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { DialogService } from '../../../shared/dialog/services/dialog.service';
 import { DialogFactoryService } from 'src/app/shared/dialog/services/dialog-factory.service';
-import { Observable, timer } from 'rxjs';
-import { map, scan, takeWhile } from 'rxjs/operators';
-import { POPUP_WIDTH, POPUP_HEIGHT } from '../../../core/constants/popups';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-logIn-popup',
@@ -24,22 +22,17 @@ export class LogInPopupComponent implements OnInit {
   public passwordInputType = 'password';
   public firstLogInStage = true;
   public smsCode: string;
-  public colorInOTP = '#FFF';
-  public borderInOTP = '1px solid #ffffff';
   public isTimerOff = true;
-  public countdown: Observable<string>;
   public isNextBtnDisabled = true;
   public isCodeWrong = false;
   public userPhoneNumber: any;
   public isActiveErrorStyle = false;
-  public isLoadingUserData = false;
   public currentLanguage: string;
   private REG_EXP_EMAIL = '^([a-zA-Z0-9_-]+\\.)*[a-zA-Z0-9_-]+@[a-zA-Z0-9_-]+(\\.[a-z0-9_-]+)*\\.[a-z]{2,6}$';
 
   constructor(
-    private formBuilder: FormBuilder,
-    private dialogFactoryService: DialogFactoryService) {
-    }
+    private formBuilder: FormBuilder) {
+  }
 
 
   public get email(): FormControl {
@@ -52,7 +45,7 @@ export class LogInPopupComponent implements OnInit {
 
   public makePasswordVisible(): void {
     this.passwordVisible = !this.passwordVisible;
-    if (this.passwordInputType === 'password') {
+    if ( this.passwordInputType === 'password' ) {
       this.passwordInputType = 'text';
     } else {
       this.passwordInputType = 'password';
