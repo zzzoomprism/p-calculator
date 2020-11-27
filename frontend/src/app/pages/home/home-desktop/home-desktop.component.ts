@@ -33,4 +33,8 @@ export class HomeDesktopComponent implements OnInit {
     this.router.navigate(['ch-en/', RoutesNames.CALCUlATED])
   }
 
+  public navigationToPersonalInfo() {
+    this.router.navigate(['ch-en/', RoutesNames.PERSONAL_INFO])
+  }
+
 }

@@ -1,7 +1,5 @@
 <div class="input-wrapper" [class.validation-error]="isInvalid">
-  <ng-container *ngIf="!isInvalid && !noValidation else error">
-    <label>{{ label | translate }}</label>
-  </ng-container>
+    <label>{{ label}}</label>
 
   <ng-template #error>
     <label>{{ errorLabel | translate }}</label>
@@ -15,5 +13,9 @@
       [readOnly]="readonly"
       [placeholder]="placeholder"
     />
+    <div class="edit-icons">
+      <span class="up-icon"></span>
+      <span class="down-icon"></span>
+    </div>
   </div>
 </div>

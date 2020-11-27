@@ -16,15 +16,14 @@ import { PrivacyPolicyComponent } from './pages/privacy-policy/privacy-policy.co
 import { KeenComponent } from './pages/keen/keen.component';
 import { FooterModule } from './shared/footer/footer.module';
 import { ButtonModule } from './shared/button/button.module';
-import { PersonalInformationComponent } from './pages/personal-information/personal-information.component';
-import { TabsComponent } from './shared/tabs/tabs.component';
-import { PersonalLayoutComponent } from './pages/personal-layout/personal-layout.component';
-import { LogInPopupComponent } from './pages/popups/logIn-popup/logIn-popup.component';
+import { PersonalInformationComponent } from './pages/questionnaire/personal-information/personal-information.component';
+import { PersonalLayoutComponent } from './pages/questionnaire/personal-layout/personal-layout.component';
 import { DialogModule } from './shared/dialog/dialog.module';
 import { FormsModule } from '@angular/forms';
 import { NgOtpInputModule } from 'ng-otp-input';
 import { BarChartModule } from './shared/bar-chart/bar-chart.module';
-import { IncomeGrossComponent } from './pages/income-gross/income-gross.component';
+import { IncomeGrossComponent } from './pages/questionnaire/income-gross/income-gross.component';
+import { StartModule } from './pages/questionnaire/start.module';
 
 @NgModule({
   declarations: [
@@ -34,7 +33,6 @@ import { IncomeGrossComponent } from './pages/income-gross/income-gross.componen
     PrivacyPolicyComponent,
     KeenComponent,
     PersonalInformationComponent,
-    TabsComponent,
     PersonalLayoutComponent,
     IncomeGrossComponent,
   ],
@@ -53,7 +51,8 @@ import { IncomeGrossComponent } from './pages/income-gross/income-gross.componen
     DialogModule,
     FormsModule,
     NgOtpInputModule,
-    BarChartModule
+    BarChartModule,
+    StartModule
   ],
   providers: [],
   bootstrap: [AppComponent]

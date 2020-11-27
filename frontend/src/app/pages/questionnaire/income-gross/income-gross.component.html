@@ -1,0 +1,16 @@
+<div class="wrapper">
+  <div class="content">
+    <div class="title">
+      Einkommen
+    </div>
+    <div class="description">
+      Die Höhe Ihres regulären Einkommens beeinflusst Ihre Altersvorsorge am meisten. Mit einfachen Worten: Je mehr Sie verdienen, desto mehr AHV- und Pensionskassen-Beiträge zahlen Sie und desto höher ist Ihre zukünftige Rente.
+    </div>
+    <div class="data-slider">
+      <app-slider title="Jährliches Erwerbseinkommen" [step]="1000" [min]="10000" [max]="500000" metric="CHF" [value]="100000"></app-slider>
+    </div>
+    <div class="data-input">
+      <app-input [inputType]="'number'" [value]="1" [label]="'Anzahl Jahre ohne Beiträge in die AHV'"></app-input>
+    </div>
+  </div>
+</div>

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {ISelect} from "../../shared/select/select.component";
+import {ISelect} from "../../../shared/select/select.component";
 
 @Component({
   selector: 'app-personal-information',
