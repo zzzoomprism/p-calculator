@@ -17,13 +17,13 @@ import { KeenComponent } from './pages/keen/keen.component';
 import { FooterModule } from './shared/footer/footer.module';
 import { ButtonModule } from './shared/button/button.module';
 import { PersonalInformationComponent } from './pages/questionnaire/personal-information/personal-information.component';
-import { PersonalLayoutComponent } from './pages/questionnaire/personal-layout/personal-layout.component';
 import { DialogModule } from './shared/dialog/dialog.module';
 import { FormsModule } from '@angular/forms';
 import { NgOtpInputModule } from 'ng-otp-input';
 import { BarChartModule } from './shared/bar-chart/bar-chart.module';
 import { IncomeGrossComponent } from './pages/questionnaire/income-gross/income-gross.component';
 import { StartModule } from './pages/questionnaire/start.module';
+import {SecondPillarComponent} from "./pages/questionnaire/second-pillar/second-pillar.component";
 
 @NgModule({
   declarations: [
@@ -33,8 +33,8 @@ import { StartModule } from './pages/questionnaire/start.module';
     PrivacyPolicyComponent,
     KeenComponent,
     PersonalInformationComponent,
-    PersonalLayoutComponent,
     IncomeGrossComponent,
+    SecondPillarComponent
   ],
   imports: [
     BrowserModule,

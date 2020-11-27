@@ -86,7 +86,12 @@
 
       .description {
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
+        align-items: center;
+
+        img {
+          cursor: pointer;
+        }
 
         .title {
           font-style: normal;

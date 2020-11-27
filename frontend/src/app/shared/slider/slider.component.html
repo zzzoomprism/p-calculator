@@ -3,6 +3,7 @@
     <div class="slider-value" [ngClass]="{'with-title': title}">
       <div class="description">
         <p class="title">{{title}}</p>
+        <img *ngIf="isHelp" (click)="openPopup()" [src]="'assets/icons/help.svg'">
       </div>
       <p class="selected-value" *ngIf="!isCanEnterValue; else input">
         {{value.toLocaleString('en-US')}} {{metric}}

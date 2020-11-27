@@ -13,9 +13,11 @@ export class SliderComponent implements OnInit{
   @Input() public title: string;
   @Input() public step: number;
   @Input() public metric = 'CHF';
+  @Input() public isHelp: boolean = false;
   @Input() public isDisabled = false;
   @Input() public isCanEnterValue = true;
   @Output() public valueChanged: EventEmitter<number> = new EventEmitter<number>();
+  @Output() public isOpenPopup: EventEmitter<boolean> = new EventEmitter<boolean>();
 
   public inputValue: string;
 
@@ -58,5 +60,9 @@ export class SliderComponent implements OnInit{
       return;
     }
     this.valueChanged.emit(tempValue);
+  }
+
+  public openPopup(): void {
+    this.isOpenPopup.emit(true);
   }
 }

@@ -3,19 +3,21 @@
 
 :host{
   .content {
-    height: 70vh;
     display: flex;
     flex-direction: column;
+    height: 70vh;
     .first-row{
-      max-height: 56px;
-      max-width: 460px;
       margin-top: 47px;
-      display:flex;
-      justify-content: space-between;
-      align-items: center;
-      &-select {
-        max-width: 167px;
-      }
+    }
+    .title {
+      font-style: normal;
+      font-weight: bold;
+      font-size: 26px;
+      line-height: 150%;
+    }
+
+    .description{
+      margin-top: 18px;
     }
     .second-row{
       margin-top: 32px;
@@ -28,4 +30,5 @@
       align-items: center;
     }
   }
+
 }

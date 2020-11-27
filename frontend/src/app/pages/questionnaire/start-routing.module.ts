@@ -1,9 +1,10 @@
 import { RouterModule, Routes } from '@angular/router';
 import { NgModule } from '@angular/core';
 import { RoutesNames } from '../../core/constants/routes-names';
-import { PersonalLayoutComponent } from './personal-layout/personal-layout.component';
 import { IncomeGrossComponent } from './income-gross/income-gross.component';
 import { StartComponent } from './start.component';
+import {PersonalInformationComponent} from "./personal-information/personal-information.component";
+import {SecondPillarComponent} from "./second-pillar/second-pillar.component";
 
 const routes: Routes = [
   {
@@ -12,11 +13,15 @@ const routes: Routes = [
     children: [
       {
         path: `${RoutesNames.PERSONAL_INFO}`,
-        component: PersonalLayoutComponent,
+        component: PersonalInformationComponent,
       },
       {
         path: `${RoutesNames.INCOME}`,
         component: IncomeGrossComponent,
+      },
+      {
+        path: `${RoutesNames.SECOND_PILLAR}`,
+        component: SecondPillarComponent,
       },
     ]
   },
