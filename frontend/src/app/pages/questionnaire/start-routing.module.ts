@@ -6,6 +6,7 @@ import { StartComponent } from './start.component';
 import {PersonalInformationComponent} from "./personal-information/personal-information.component";
 import {SecondPillarComponent} from "./second-pillar/second-pillar.component";
 import {AdditionalComponent} from "./additional/additional.component";
+import {ThirdPillarComponent} from "./third-pillar/third-pillar.component";
 
 const routes: Routes = [
   {
@@ -23,6 +24,10 @@ const routes: Routes = [
       {
         path: `${RoutesNames.SECOND_PILLAR}`,
         component: SecondPillarComponent,
+      },
+      {
+        path: `${RoutesNames.THIRD_PILLAR}`,
+        component: ThirdPillarComponent,
       },
       {
         path: `${RoutesNames.ADDITIONAL}`,

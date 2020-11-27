@@ -1,0 +1,30 @@
+<div class="content">
+  <div class="title">
+    3. Säule
+  </div>
+  <div  class="description">
+    Die 3. Säule ist freiwillig und umfasst den gebundenen Sparprozess im Hinblick auf die Pensionierung.<br>
+    Ein grosser Vorteil der Säule 3a ist, dass die geleisteten Beiträge steuerbazugsfähig sind. Die Höhe der steuerlich privilegierten Beiträge wird vom Staat festgelegt, im Jahr 2020 betrug diese 6’826 Franken pro Jahr wenn sie einer Vorsorgeeinrichtung der 2. Säule angehören.
+  </div>
+  <div class="sub-title">
+    Haben Sie 3a-Guthaben bei Banken und/oder Versicherungen?
+  </div>
+  <div class="columns">
+    <div class="first-column">
+      <div class="first-row">
+        <app-slider title="Aktuelles Säule 3a-Guthaben" [step]="1000" [min]="0" [max]="5000000" metric="CHF" [value]="100000"></app-slider>
+      </div>
+      <div class="first-row">
+        <app-slider title="Jährlicher Beitrag" [step]="1000" [min]="0" [max]="500000" metric="CHF" [value]="100000"></app-slider>
+        <div  class="row-description">
+          Sie können alles zwischen 1 CHF und dem gesetzlich erlaubten Höchstbetrag anlegen
+        </div>
+      </div>
+    </div>
+    <div class="second-column">
+      <div class="third-row">
+        <app-button title="Weiter" [isFull]="true" [img]="'assets/icons/right-arrow.svg'"></app-button>
+      </div>
+    </div>
+  </div>
+</div>

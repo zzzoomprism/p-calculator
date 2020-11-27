@@ -26,6 +26,7 @@ import { StartModule } from './pages/questionnaire/start.module';
 import {SecondPillarComponent} from "./pages/questionnaire/second-pillar/second-pillar.component";
 import {SecondPillarInfoPopupComponent} from "./pages/popups/second-pillar-info-popup/second-pillar-info-popup.component";
 import {AdditionalComponent} from "./pages/questionnaire/additional/additional.component";
+import {ThirdPillarComponent} from "./pages/questionnaire/third-pillar/third-pillar.component";
 
 @NgModule({
   declarations: [
@@ -37,6 +38,7 @@ import {AdditionalComponent} from "./pages/questionnaire/additional/additional.c
     PersonalInformationComponent,
     IncomeGrossComponent,
     SecondPillarComponent,
+    ThirdPillarComponent,
     AdditionalComponent,
     SecondPillarInfoPopupComponent
   ],
